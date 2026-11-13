@@ -197,10 +197,10 @@
 <body class="flex items-center justify-center px-3 text-black relative">
   <div class="balloon bg-pink-400 left-4 top-10"></div>
   <div class="balloon bg-purple-400 right-4 top-16" style="animation-delay:1s"></div>
-  
+  
   <main class="relative z-10 w-full max-w-lg my-auto">
     <div class="glass rounded-[2rem] p-5 sm:p-8 text-center shadow-2xl">
-      
+      
       <!-- الخطوة 0 -->
       <section class="step active w-full" data-step="0">
         <p class="uppercase tracking-[.3em] text-xs text-pink-700 mb-3 font-semibold">A tiny surprise for you</p>
@@ -241,43 +241,23 @@
         <button onclick="blowCandle()" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-bold shadow-xl transition text-sm">Blow Candle 🕯️</button>
       </section>
 
-      <!-- الخطوة 4: حوار Why Do I Love You التفاعلي -->
-      <section class="step w-full" data-step="4">
-        <p class="uppercase tracking-[.3em] text-xs text-pink-700 mb-2 font-semibold">Special Section</p>
-        <h2 class="font-love text-3xl sm:text-4xl mb-3">Why Do I Love You? 🥺💗</h2>
-        <p class="text-black/80 mb-4 text-xs">Click the button to reveal why you're my everything...</p>
-        
-        <div class="bg-white/30 rounded-2xl p-5 border border-white/40 shadow-md min-h-[130px] flex flex-col items-center justify-center">
-          <p id="loveReasonText" class="text-base sm:text-lg font-semibold text-pink-900 text-center mb-4 transition-all duration-300">
-            "Because you're already my home without you ill be lost 🫶"
-          </p>
-          <button onclick="nextReason()" class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 rounded-full font-bold shadow-lg text-xs transition hover:scale-105">
-            Next Reason 💖
-          </button>
-        </div>
-
-        <button onclick="nextStep()" class="mt-6 bg-white text-pink-600 px-6 py-2.5 rounded-full font-bold shadow-xl hover:scale-105 active:scale-95 transition text-sm">
-          Continue to Final Message ✨
-        </button>
-      </section>
-
-      <!-- الخطوة 5: الرسالة النهائية (والصور بتظهر هنا بس) -->
-      <section class="step w-full text-left" data-step="5">
+      <!-- الخطوة 4: الرسالة النهائية (والصور بتظهر هنا بس) -->
+      <section class="step w-full text-left" data-step="4">
         <p class="uppercase tracking-[.3em] text-xs text-pink-700 mb-3 font-semibold text-center">Final Message</p>
         <h2 class="font-love text-3xl sm:text-5xl mb-4 text-center">Happy Birthday Aabass 🎂</h2>
-        
+        
         <div class="bg-white/30 rounded-2xl p-4 sm:p-6 border border-white/40 shadow-sm relative">
           <p class="text-sm sm:text-base leading-relaxed text-black/95">
-           On your special day I wanna say happy birthday Abostyy, i want you to know how much I LOVE YOU and that I WILL ALWAYS LOVE YOU for the man you are and the man you was and the man you want to be, i want you to know how you really effected in my whole life, in my days and everything became better even me just because of you, i hope i can be the best for you and never make you sad because I ONLY WANT YOU and only NEED you in my life because you're already my home without you ill be lost. 
+           On your special day I wanna say happy birthday Abostyy, i want you to know how much I LOVE YOU and that I WILL ALWAYS LOVE YOU for the man you are and the man you was and the man you want to be, i want you to know how you really effected in my whole life, in my days and everything became better even me just because of you, i hope i can be the best for you and never make you sad because I ONLY WANT YOU and only NEED you in my life because you're already my home without you ill be lost. 
            <br><br>
-           I really love everything about you, your personality, your voice, your face, your hair and YOUR EYES. 
+           I really love everything about you, your personality, your voice, your face, your hair and YOUR EYES. 
            I hope we turn forever and live together in the rest of our life i really love you Ahmed 🫶🏻.
           </p>
           <p class="text-sm sm:text-base leading-relaxed text-black/95 mt-3">
             May Allah bless you with endless happiness, health, success, love, and every dream your heart silently prays for. I am so lucky to have you my baby🫶
           </p>
 
-          <!-- الصورتين بيظهروا في الخطوة دي جوه أو حوالين الرسالة بشكل جميل -->
+          <!-- الصورتين في الخطوة الأخيرة بس -->
           <div class="flex justify-center gap-4 mt-6">
             <img src="Photo(1).jpg" alt="Memory 1" class="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-xl shadow-md border-2 border-white -rotate-3 hover:rotate-0 transition duration-300">
             <img src="Photo(2).jpg" alt="Memory 2" class="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-xl shadow-md border-2 border-white rotate-3 hover:rotate-0 transition duration-300">
@@ -300,33 +280,13 @@
     const heartGame = document.getElementById('heartGame');
     const scoreEl = document.getElementById('score');
 
-    const loveReasons = [
-      "Because you're already my home without you ill be lost 🫶",
-      "Because of your gorgeous eyes and your comforting voice 🥺",
-      "Because you make every single day of my life better just by being in it ✨",
-      "Because you're my favorite person in the whole wide world 😻",
-      "Because I love the man you are, the man you were, and the man you want to be 💗",
-      "Because simply... I ONLY WANT YOU and NEED YOU in my life forever 💍"
-    ];
-    let reasonIndex = 0;
-
-    function nextReason() {
-      reasonIndex = (reasonIndex + 1) % loveReasons.length;
-      const textEl = document.getElementById('loveReasonText');
-      textEl.style.opacity = 0;
-      setTimeout(() => {
-        textEl.textContent = `"${loveReasons[reasonIndex]}"`;
-        textEl.style.opacity = 1;
-      }, 200);
-    }
-
     function showStep(index) {
       steps.forEach(step => step.classList.remove('active'));
       steps[index].classList.add('active');
       currentStep = index;
       window.scrollTo({ top: 0, behavior: 'smooth' });
       if (index === 1) moveHeart();
-      if (index === 5) launchConfetti();
+      if (index === 4) launchConfetti(); // الخطوة الأخيرة بقت رقم 4
     }
 
     function nextStep() {
@@ -386,7 +346,7 @@
     function blowCandle() {
       document.getElementById('flame').style.display = 'none';
       launchConfetti(100);
-      setTimeout(() => showStep(4), 1200);
+      setTimeout(() => showStep(4), 1200); // بينقل علطول للرسالة النهائية والفتحة الأخيرة
     }
 
     function launchConfetti(amount = 80) {
@@ -406,8 +366,6 @@
     function restartWish() {
       score = 0;
       scoreEl.textContent = '0';
-      reasonIndex = 0;
-      document.getElementById('loveReasonText').textContent = `"${loveReasons[0]}"`;
       document.getElementById('flame').style.display = 'block';
       document.getElementById('giftMessage').classList.add('hidden');
       document.querySelector('.gift-box').classList.remove('open');
