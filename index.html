@@ -56,7 +56,7 @@
       backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 255, 255, 0.35);
       box-shadow: 0 25px 60px rgba(121, 0, 65, 0.28);
-      max-height: 85vh;
+      max-height: 90vh;
       overflow-y: auto;
     }
     .glass::-webkit-scrollbar {
@@ -198,46 +198,46 @@
       75% { transform: translateX(8px); }
     }
 
-    /* تنسيق معرض البولارويد للذكريات (8 صور) */
+    /* تنسيق معرض البولارويد للذكريات */
     .polaroid-gallery {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-top: 25px;
-      margin-bottom: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .polaroid-card {
       background: white;
-      padding: 8px 8px 20px 8px;
+      padding: 10px 10px 25px 10px;
       border-radius: 6px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-      width: 115px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 140px;
       transition: transform 0.3s ease, z-index 0.3s ease;
       position: relative;
     }
     .polaroid-card:nth-child(odd) {
-      transform: rotate(-3deg);
+      transform: rotate(-4deg);
     }
     .polaroid-card:nth-child(even) {
-      transform: rotate(3deg);
+      transform: rotate(4deg);
     }
     .polaroid-card:hover {
-      transform: scale(1.15) rotate(0deg) !important;
+      transform: scale(1.1) rotate(0deg) !important;
       z-index: 50;
-      box-shadow: 0 15px 30px rgba(255, 47, 134, 0.35);
+      box-shadow: 0 15px 35px rgba(255, 47, 134, 0.3);
     }
     .polaroid-card img {
       width: 100%;
-      height: 105px;
+      height: 130px;
       object-fit: cover;
       border-radius: 4px;
     }
     .polaroid-caption {
       font-family: 'Pacifico', cursive;
-      font-size: 11px;
+      font-size: 12px;
       color: #ff2f86;
-      margin-top: 6px;
+      margin-top: 8px;
       text-align: center;
     }
   </style>
@@ -248,7 +248,7 @@
   <div class="balloon bg-yellow-300 left-1/4 bottom-16" style="animation-delay:2s"></div>
   <div class="balloon bg-red-400 right-1/4 bottom-20" style="animation-delay:.5s"></div>
   
-  <main class="relative z-10 w-full max-w-4xl">
+  <main class="relative z-10 w-full max-w-3xl">
     <div class="glass rounded-[2rem] p-6 sm:p-10 text-center min-h-[560px] flex items-center justify-center">
       
       <!-- الخطوة 0 -->
@@ -291,12 +291,12 @@
         <button onclick="blowCandle()" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-bold shadow-xl transition">Blow Candle 🕯️</button>
       </section>
 
-      <!-- الخطوة 4 (النهاية والرسالة ومعرض الـ 8 صور) -->
+      <!-- الخطوة 4 (النهاية والرسالة والذكريات) -->
       <section class="step w-full" data-step="4">
         <p class="uppercase tracking-[.35em] text-sm text-pink-700 mb-4 font-semibold">Final Message</p>
         <h2 class="font-love text-4xl sm:text-6xl mb-6">Happy Birthday Aabass 🎂</h2>
         
-        <div class="max-w-3xl mx-auto text-left bg-white/30 rounded-3xl p-6 border border-white/40 shadow-sm">
+        <div class="max-w-2xl mx-auto text-left bg-white/30 rounded-3xl p-6 border border-white/40 shadow-sm">
           <p class="text-base sm:text-lg leading-7 text-black/95">
            On your special day I wanna say happy birthday Abostyy, i want you to know how much I LOVE YOU and that I WILL ALWAYS LOVE YOU for the man you are and the man you was and the man you want to be, i want you to know how you really effected in my whole life, in my days and everything became better even me just because of you, i hope i can be the best for you and never make you sad because I ONLY WANT YOU and only NEED you in my life because you're already my home without you ill be lost. 
            <br><br>
@@ -307,7 +307,7 @@
             May Allah bless you with endless happiness, health, success, love, and every dream your heart silently prays for. I am so lucky to have you my baby🫶
           </p>
 
-          <!-- معرض الذكريات (8 صور بولارويد) -->
+          <!-- معرض الذكريات (بولارويد) -->
           <div class="polaroid-gallery">
             <div class="polaroid-card">
               <img src="Photo(1).jpg" alt="Memory 1">
@@ -316,30 +316,6 @@
             <div class="polaroid-card">
               <img src="Photo(2).jpg" alt="Memory 2">
               <div class="polaroid-caption">Forever 😻</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(3).jpg" alt="Memory 3">
-              <div class="polaroid-caption">My Love 💕</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(4).jpg" alt="Memory 4">
-              <div class="polaroid-caption">Best Days ✨</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(5).jpg" alt="Memory 5">
-              <div class="polaroid-caption">My Life 💗</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(6).jpg" alt="Memory 6">
-              <div class="polaroid-caption">So Cute 😽</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(7).jpg" alt="Memory 7">
-              <div class="polaroid-caption">Together 🥂</div>
-            </div>
-            <div class="polaroid-card">
-              <img src="Photo(8).jpg" alt="Memory 8">
-              <div class="polaroid-caption">Always 🫶</div>
             </div>
           </div>
         </div>
@@ -456,9 +432,10 @@
   <!-- مشغل الأغاني -->
   <audio src="You Are the Right One (1).mp3" controls loop style="position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 999; opacity: 0.8;"></audio>
 
-  <!-- الصور الجانبية (مثال: Photo 7 على الشمال و Photo 8 على اليمين) -->
+  <!-- حاوية الصور الجانبية الثابتة -->
   <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999;">
-    <img src="Photo(7).jpg" style="position: absolute; top: 15%; left: 5%; width: 120px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transform: rotate(-10deg);">  
+    <img src="Photo(1).jpg" style="position: absolute; top: 15%; left: 5%; width: 120px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transform: rotate(-10deg);">
+    <img src="Photo(2).jpg" style="position: absolute; top: 15%; right: 5%; width: 120px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transform: rotate(10deg);">
   </div>
 
 </body>
